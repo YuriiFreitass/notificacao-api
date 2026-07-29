@@ -1,5 +1,6 @@
 package com.yurifreitas.notificacao_api.config;
 
+import ch.qos.logback.classic.pattern.MessageConverter;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -27,5 +28,4 @@ public class RabbitMQConfig {
 	public Binding binding(Queue queue, TopicExchange exchange) {
 		return BindingBuilder.bind(queue).to(exchange).with("usuarios.criado.#");
 	}
-
 }
