@@ -34,8 +34,8 @@ public class UsuarioService {
 		return usuarioMapper.toResponseDto(usuario);
 	}
 
-	public UsuarioResponseDto save(String email, UsuarioRequestDto usuarioRequestDto) {
-		if (usuarioRepository.existsByEmail(email)) {
+	public UsuarioResponseDto save(UsuarioRequestDto usuarioRequestDto) {
+		if (usuarioRepository.existsByEmail(usuarioRequestDto.email())) {
 			throw new EmailDuplicadoException("Esse email já está cadastrado");
 		}
 		UsuarioEntity usuario = usuarioMapper.toEntity(usuarioRequestDto);

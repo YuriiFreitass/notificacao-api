@@ -1,6 +1,5 @@
 package com.yurifreitas.notificacao_api.controller;
 
-import com.yurifreitas.notificacao_api.dto.UsuarioReponseDto;
 import com.yurifreitas.notificacao_api.dto.UsuarioRequestDto;
 import com.yurifreitas.notificacao_api.dto.UsuarioResponseDto;
 import com.yurifreitas.notificacao_api.service.UsuarioService;
@@ -32,8 +31,8 @@ public class UsuarioController {
 
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public UsuarioResponseDto save(String email, @Valid @RequestBody UsuarioRequestDto usuarioRequestDto) {
-		return usuarioService.save(email,usuarioRequestDto);
+	public UsuarioResponseDto save(@Valid @RequestBody UsuarioRequestDto usuarioRequestDto) {
+		return usuarioService.save(usuarioRequestDto);
 	}
 
 	@PutMapping("/{id}")
