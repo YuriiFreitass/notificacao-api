@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
+@Table(name = "notificacoes_tb")
 public class NotificacaoEntity {
 
 	@Id
