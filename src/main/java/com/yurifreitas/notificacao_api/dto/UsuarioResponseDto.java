@@ -1,6 +1,6 @@
 package com.yurifreitas.notificacao_api.dto;
 
-public record UsuarioReponseDto (
+public record UsuarioResponseDto (
 		Long id,
 		String nome,
 		String email
