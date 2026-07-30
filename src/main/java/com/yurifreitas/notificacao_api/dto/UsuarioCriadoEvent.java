@@ -8,4 +8,5 @@ public record UsuarioCriadoEvent(
 		String nome,
 		String email,
 		LocalDateTime dataCadastro
-) {}
+) {
+}
